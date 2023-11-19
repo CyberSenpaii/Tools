@@ -85,6 +85,7 @@ if __name__ == "__main__":
         'https://github.com/mandiant/capa.git',
         'https://github.com/NationalSecurityAgency/ghidra.git',
         'https://github.com/giuspen/cherrytree.git',
+        'https://github.com/hatnetsec/NetworkMiner.git'
         # Add more repository URLs as needed
     ]
 
