@@ -93,7 +93,8 @@ if __name__ == "__main__":
         'https://github.com/quentinhardy/odat.git',
         'https://github.com/unode/firefox_decrypt.git',
         'https://github.com/DNSCrypt/dnscrypt-proxy.git',
-        'https://github.com/ly4k/Certipy.git'
+        'https://github.com/ly4k/Certipy.git',
+        'https://github.com/r3motecontrol/Ghostpack-CompiledBinaries.git'
         # Add more repository URLs as needed
     ]
   
