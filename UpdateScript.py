@@ -1,5 +1,26 @@
 import os
 import subprocess
+import sys
+
+def check_root():
+    # Check if the script is run as root
+    if os.geteuid() != 0:
+        print('Please run the script as root (using sudo).')
+        sys.exit(1)
+
+def install_packages(package_list):
+    # Convert the list of packages to a space-separated string
+    packages_str = ' '.join(package_list)
+
+    # Construct the apt install command
+    command = f'sudo apt install {packages_str} -y'
+
+    try:
+        # Run the command using subprocess
+        subprocess.run(command, shell=True, check=True)
+        print(f'Successfully installed packages: {packages_str}')
+    except subprocess.CalledProcessError as e:
+        print(f'Error installing packages: {e}')
 
 def clone_repositories(repo_urls, destination_folder='.'):
     if not os.path.exists(destination_folder):
@@ -95,3 +116,9 @@ if __name__ == "__main__":
 
     clone_repositories(red_urls, red_folder)
     clone_repositories(blue_urls, blue_folder)
+
+    packages_to_install={
+        'onesixtyone',
+        'braa'
+    ]
+    install_packages(packages_to_install)
