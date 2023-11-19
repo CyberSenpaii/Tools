@@ -71,7 +71,8 @@ if __name__ == "__main__":
         'https://github.com/AlessandroZ/LaZagne.git',
         'https://github.com/quentinhardy/odat.git',
         'https://github.com/unode/firefox_decrypt.git',
-        'https://github.com/DNSCrypt/dnscrypt-proxy.git'
+        'https://github.com/DNSCrypt/dnscrypt-proxy.git',
+        'https://github.com/ly4k/Certipy.git'
         # Add more repository URLs as needed
     ]
   
