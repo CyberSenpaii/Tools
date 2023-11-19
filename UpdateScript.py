@@ -46,7 +46,32 @@ if __name__ == "__main__":
         'https://github.com/GTFOBins/GTFOBins.github.io.git',
         'https://github.com/LOLBAS-Project/LOLBAS.git',
         'https://github.com/WADComs/WADComs.github.io.git',
-        '
+        'https://github.com/swisskyrepo/PayloadsAllTheThings.git',
+        'https://github.com/trustedsec/social-engineer-toolkit.git',
+        'https://github.com/DigitalInterruption/cookie-monster.git',
+        'https://github.com/t3l3machus/hoaxshell.git',
+        'https://github.com/mdsecactivebreach/SharpShooter.git',
+        'https://github.com/sqlmapproject/sqlmap.git',
+        'https://github.com/BC-SECURITY/Empire.git',
+        'https://github.com/BC-SECURITY/Starkiller.git',
+        'https://github.com/itm4n/PrintSpoofer.git',
+        'https://github.com/maurosoria/dirsearch.git',
+        'https://github.com/epi052/feroxbuster.git',
+        'https://github.com/projectdiscovery/nuclei.git',
+        'https://github.com/samratashok/nishang.git',
+        'https://github.com/byt3bl33d3r/CrackMapExec.git',
+        'https://github.com/The-Viper-One/PsMapExec.git',
+        'https://github.com/lgandx/Responder.git',
+        'https://github.com/0dayCTF/reverse-shell-generator.git',
+        'https://github.com/ropnop/kerbrute.git',
+        'https://github.com/ihebski/DefaultCreds-cheat-sheet.git',
+        'https://github.com/shelld3v/JSshell.git',
+        'https://github.com/61106960/adPEAS.git',
+        'https://github.com/urbanadventurer/username-anarchy.git',
+        'https://github.com/AlessandroZ/LaZagne.git',
+        'https://github.com/quentinhardy/odat.git',
+        'https://github.com/unode/firefox_decrypt.git',
+        'https://github.com/DNSCrypt/dnscrypt-proxy.git'
         # Add more repository URLs as needed
     ]
   
@@ -56,7 +81,9 @@ if __name__ == "__main__":
         'https://github.com/sleuthkit/autopsy.git',
         'https://github.com/VirusTotal/yara.git',
         'https://github.com/magicsword-io/LOLDrivers.git',
-        '
+        'https://github.com/mandiant/capa.git',
+        'https://github.com/NationalSecurityAgency/ghidra.git',
+        'https://github.com/giuspen/cherrytree.git',
         # Add more repository URLs as needed
     ]
 
