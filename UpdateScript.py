@@ -120,7 +120,7 @@ if __name__ == "__main__":
     clone_repositories(red_urls, red_folder)
     clone_repositories(blue_urls, blue_folder)
 
-    packages_to_install={
+    packages_to_install=[
         'onesixtyone',
         'braa',
         'evolution'
