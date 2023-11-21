@@ -1,5 +1,7 @@
 import docker
 import subprocess
+import os 
+import sys
 
 def get_container_id_by_image(image_name):
     # Connect to the Docker daemon
@@ -39,6 +41,8 @@ def get_container_logs(container_id, search_string, output_file):
         print(f"Error retrieving logs for {container.name} ({container.short_id}): {e}")
 
 if __name__ == "__main__":
+    check_root()
+    
     # Specify the image name for the container you want to find
     
     target_image = "specterops/bloodhound:latest"
