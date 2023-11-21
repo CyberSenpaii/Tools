@@ -34,6 +34,7 @@ def install_packages(package_list):
 def install_configure_docker():
     # Construct the apt install command
     updateSourcesList = "printf '%s\n' 'deb https://download.docker.com/linux/debian bullseye stable' | sudo tee /etc/apt/sources.list.d/docker-ce.list"
+    gpgKeyFile = '/etc/apt/trusted.gpg.d/docker-ce-archive-keyring.gpg'
     curlGPGKey = 'curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/docker-ce-archive-keyring.gpg'
     updateRepos = 'sudo apt update'
     installDocker = 'sudo apt install -y docker-ce docker-ce-cli containerd.io'
@@ -42,7 +43,8 @@ def install_configure_docker():
     try:
         # Run the command using subprocess
         subprocess.run(updateSourcesList, shell=True, check=True)
-        subprocess.run(curlGPGKey, shell=True, check=True)
+        if not os.path.exists(gpgKeyFile):
+            subprocess.run(curlGPGKey, shell=True, check=True)
         subprocess.run(updateRepos, shell=True, check=True)
         subprocess.run(installDocker, shell=True, check=True)
         subprocess.run(curlComposeConfig, shell=True, check=True)
