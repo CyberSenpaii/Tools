@@ -155,7 +155,8 @@ if __name__ == "__main__":
         'braa',
         'evolution',
         'leafpad',
-        'docker.io'
+        'docker.io',
+        'certipy-ad'
     ]
     
     install_packages(packages_to_install)
