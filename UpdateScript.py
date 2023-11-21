@@ -111,7 +111,8 @@ if __name__ == "__main__":
         'https://github.com/r3motecontrol/Ghostpack-CompiledBinaries.git',
         'https://github.com/rstacruz/cheatsheets.git',
         'https://github.com/az7rb/crt.sh.git',
-        'https://github.com/digininja/CeWL.git'
+        'https://github.com/digininja/CeWL.git',
+        'https://github.com/juliourena/plaintext.git'
         # Add more repository URLs as needed
     ]
   
@@ -124,8 +125,7 @@ if __name__ == "__main__":
         'https://github.com/mandiant/capa.git',
         'https://github.com/NationalSecurityAgency/ghidra.git',
         'https://github.com/giuspen/cherrytree.git',
-        'https://github.com/hatnetsec/NetworkMiner.git',
-        'https://github.com/juliourena/plaintext.git'
+        'https://github.com/hatnetsec/NetworkMiner.git'
         # Add more repository URLs as needed
     ]
 
