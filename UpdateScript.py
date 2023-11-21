@@ -22,7 +22,7 @@ def install_packages(package_list):
     except subprocess.CalledProcessError as e:
         print(f'Error installing packages: {e}')
 
-def pip3_packages(package_list):
+def install_pip3_packages(package_list):
     # Convert the list of packages to a space-separated string
     packages_str = ' '.join(package_list)
 
@@ -140,9 +140,12 @@ if __name__ == "__main__":
         'braa',
         'evolution'
     ]
+    
+    install_packages(packages_to_install)
 
     pip3_packages=[
         'pyftpdlib',
         'uploadserver'
     ]
-    install_packages(packages_to_install)
+
+    install_pip3_packages(pip3_packages)
