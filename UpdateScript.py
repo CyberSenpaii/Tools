@@ -112,7 +112,9 @@ if __name__ == "__main__":
         'https://github.com/rstacruz/cheatsheets.git',
         'https://github.com/az7rb/crt.sh.git',
         'https://github.com/digininja/CeWL.git',
-        'https://github.com/juliourena/plaintext.git'
+        'https://github.com/juliourena/plaintext.git',
+        'https://github.com/SpecterOps/Nemesis.git',
+        'https://github.com/its-a-feature/Mythic.git'
         # Add more repository URLs as needed
     ]
   
