@@ -3,6 +3,11 @@ import subprocess
 import os 
 import sys
 
+def check_root():
+    if os.getuid() !=0;
+        print("Please run the script as root (using sudo).")
+        sys.exit(1)
+
 def get_container_id_by_image(image_name):
     # Connect to the Docker daemon
     client = docker.from_env()
