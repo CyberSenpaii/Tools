@@ -33,8 +33,7 @@ def install_packages(package_list):
 
 def install_configure_docker():
     # Construct the apt install command
-    updateSourcesList = f'printf '%s\n' "deb https://download.docker.com/linux/debian bullseye stable" |
-  sudo tee /etc/apt/sources.list.d/docker-ce.list'
+    updateSourcesList = "printf '%s\n' 'deb https://download.docker.com/linux/debian bullseye stable' | sudo tee /etc/apt/sources.list.d/docker-ce.list"
     curlGPGKey = f'curl -fsSL https://download.docker.com/linux/debian/gpg |
   sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/docker-ce-archive-keyring.gpg'
     updateRepos = f'sudo apt update'
