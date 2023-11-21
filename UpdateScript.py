@@ -52,6 +52,7 @@ def clone_repositories(repo_urls, destination_folder='.'):
             print(f"Repository '{repo_name}' cloned successfully.\n")
 
 if __name__ == "__main__":
+    check_root()
     # Example array of Git repository URLs
     red_urls = [
         'https://github.com/SpecterOps/BloodHound.git',
