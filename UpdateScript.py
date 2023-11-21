@@ -27,6 +27,8 @@ def install_packages(package_list):
         subprocess.run(command, shell=True, check=True)
         subprocess.run(upgradeRepos, shell=True, check=True)
         subprocess.run(enableDocker, shell=True, check=True)
+        subprocess.run(updateRepos, shell=True, check=True)
+        subprocess.run(upgradeRepos, shell=True, check=True)
         print(f'Successfully installed packages: {packages_str}')
     except subprocess.CalledProcessError as e:
         print(f'Error installing packages: {e}')
