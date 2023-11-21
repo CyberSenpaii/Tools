@@ -16,12 +16,14 @@ def install_packages(package_list):
     updateRepos = f'sudo apt update -y'
     command = f'sudo apt install {packages_str} -y'
     upgradeRepos = f'sudo apt upgrade -y'
+    enableDocker = 'sudo systemctl enable docker --now'
 
     try:
         # Run the command using subprocess
         subprocess.run(updateRepos, shell=True, check=True)
         subprocess.run(command, shell=True, check=True)
         subprocess.run(upgradeRepos, shell=True, check=True)
+        subprocess.run(enableDocker, shell=True, check=True)
         print(f'Successfully installed packages: {packages_str}')
     except subprocess.CalledProcessError as e:
         print(f'Error installing packages: {e}')
@@ -149,7 +151,8 @@ if __name__ == "__main__":
         'onesixtyone',
         'braa',
         'evolution',
-        'leafpad'
+        'leafpad',
+        'docker.io'
     ]
     
     install_packages(packages_to_install)
