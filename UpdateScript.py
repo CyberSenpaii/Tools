@@ -141,7 +141,8 @@ if __name__ == "__main__":
     packages_to_install=[
         'onesixtyone',
         'braa',
-        'evolution'
+        'evolution',
+        'leafpad'
     ]
     
     install_packages(packages_to_install)
