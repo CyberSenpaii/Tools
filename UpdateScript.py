@@ -15,14 +15,17 @@ def install_packages(package_list):
     # Construct the apt install command
     updateRepos = f'sudo apt update {packages_str} -y'
     command = f'sudo apt install {packages_str} -y'
+    upgradeRepos = f'sudo apt upgrade {packages_str} -y'
 
     try:
         # Run the command using subprocess
+        subprocess.run(updateRepos, shell=True, check=True)
         subprocess.run(command, shell=True, check=True)
+        subprocess.run(upgradeRepos, shell=True, check=True)
         print(f'Successfully installed packages: {packages_str}')
     except subprocess.CalledProcessError as e:
         print(f'Error installing packages: {e}')
-    upgradeRepos = f'sudo apt upgrade {packages_str} -y'
+    
 
 def install_pip3_packages(package_list):
     # Convert the list of packages to a space-separated string
