@@ -2,6 +2,9 @@ import os
 import subprocess
 import sys
 
+#If you want to add yourself to the docker group to use docker without sudo, an additional step is needed:
+#sudo usermod -aG docker $USER
+
 def check_root():
     # Check if the script is run as root
     if os.geteuid() != 0:
