@@ -158,6 +158,7 @@ if __name__ == "__main__":
         'evolution',
         'leafpad',
         'docker.io',
+        'docker-compose',
         'certipy-ad'
     ]
     
