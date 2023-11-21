@@ -24,7 +24,6 @@ def install_packages(package_list):
         # Run the command using subprocess
         subprocess.run(updateRepos, shell=True, check=True)
         subprocess.run(command, shell=True, check=True)
-        subprocess.run(upgradeRepos, shell=True, check=True)
         subprocess.run(updateRepos, shell=True, check=True)
         subprocess.run(upgradeRepos, shell=True, check=True)
         print(f'Successfully installed packages: {packages_str}')
