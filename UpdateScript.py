@@ -22,6 +22,20 @@ def install_packages(package_list):
     except subprocess.CalledProcessError as e:
         print(f'Error installing packages: {e}')
 
+def pip3_packages(package_list):
+    # Convert the list of packages to a space-separated string
+    packages_str = ' '.join(package_list)
+
+    # Construct the apt install command
+    command = f'sudo pip3 install {packages_str}'
+
+    try:
+        # Run the command using subprocess
+        subprocess.run(command, shell=True, check=True)
+        print(f'Successfully installed packages: {packages_str}')
+    except subprocess.CalledProcessError as e:
+        print(f'Error installing packages: {e}')
+
 def clone_repositories(repo_urls, destination_folder='.'):
     if not os.path.exists(destination_folder):
         os.makedirs(destination_folder)
@@ -124,7 +138,11 @@ if __name__ == "__main__":
     packages_to_install=[
         'onesixtyone',
         'braa',
-        'evolution',
-        'pyftpdlib'
+        'evolution'
+    ]
+
+    pip3_packages=[
+        'pyftpdlib',
+        'uploadserver'
     ]
     install_packages(packages_to_install)
