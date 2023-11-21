@@ -19,20 +19,36 @@ def install_packages(package_list):
     updateRepos = f'sudo apt update -y'
     command = f'sudo apt install {packages_str} -y'
     upgradeRepos = f'sudo apt upgrade -y'
-    enableDocker = 'sudo systemctl enable docker --now'
 
     try:
         # Run the command using subprocess
         subprocess.run(updateRepos, shell=True, check=True)
         subprocess.run(command, shell=True, check=True)
         subprocess.run(upgradeRepos, shell=True, check=True)
-        subprocess.run(enableDocker, shell=True, check=True)
         subprocess.run(updateRepos, shell=True, check=True)
         subprocess.run(upgradeRepos, shell=True, check=True)
         print(f'Successfully installed packages: {packages_str}')
     except subprocess.CalledProcessError as e:
         print(f'Error installing packages: {e}')
-    
+
+def install_configure_docker():
+    # Construct the apt install command
+    updateSourcesList = f'printf '%s\n' "deb https://download.docker.com/linux/debian bullseye stable" |
+  sudo tee /etc/apt/sources.list.d/docker-ce.list'
+    curlGPGKey = f'curl -fsSL https://download.docker.com/linux/debian/gpg |
+  sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/docker-ce-archive-keyring.gpg'
+    updateRepos = f'sudo apt update'
+    installDocker = f'sudo apt install -y docker-ce docker-ce-cli containerd.io'
+
+    try:
+        # Run the command using subprocess
+        subprocess.run(updateSourcesList, shell=True, check=True)
+        subprocess.run(curlGPGKey, shell=True, check=True)
+        subprocess.run(updateRepos, shell=True, check=True)
+        subprocess.run(installDocker, shell=True, check=True)
+        print(f'Successfully installed docker')
+    except subprocess.CalledProcessError as e:
+        print(f'Error installing packages: {e}')
 
 def install_pip3_packages(package_list):
     # Convert the list of packages to a space-separated string
@@ -151,18 +167,18 @@ if __name__ == "__main__":
 
     clone_repositories(red_urls, red_folder)
     clone_repositories(blue_urls, blue_folder)
-
-    packages_to_install=[
+    
+    install_configure_docker()
+    
+    apt_packages=[
         'onesixtyone',
         'braa',
         'evolution',
         'leafpad',
-        'docker.io',
-        'docker-compose',
         'certipy-ad'
     ]
     
-    install_packages(packages_to_install)
+    install_packages(apt_packages)
 
     pip3_packages=[
         'pyftpdlib',
