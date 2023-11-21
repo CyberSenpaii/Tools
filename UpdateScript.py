@@ -32,7 +32,7 @@ def install_pip3_packages(package_list):
     packages_str = ' '.join(package_list)
 
     # Construct the apt install command
-    command = f'sudo pip3 install {packages_str}'
+    command = f'pip3 install {packages_str}'
 
     try:
         # Run the command using subprocess
