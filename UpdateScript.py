@@ -124,6 +124,7 @@ if __name__ == "__main__":
     packages_to_install=[
         'onesixtyone',
         'braa',
-        'evolution'
+        'evolution',
+        'pyftpdlib'
     ]
     install_packages(packages_to_install)
