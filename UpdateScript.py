@@ -37,8 +37,7 @@ def install_configure_docker():
     curlGPGKey = 'curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/docker-ce-archive-keyring.gpg'
     updateRepos = 'sudo apt update'
     installDocker = 'sudo apt install -y docker-ce docker-ce-cli containerd.io'
-    curlComposeConfig = 'curl https://raw.githubusercontent.com/SpecterOps/bloodhound/main/examples/docker-compose/docker-compose.yml'
-
+    
     try:
         # Run the command using subprocess
         subprocess.run(updateSourcesList, shell=True, check=True)
@@ -46,7 +45,6 @@ def install_configure_docker():
             subprocess.run(curlGPGKey, shell=True, check=True)
         subprocess.run(updateRepos, shell=True, check=True)
         subprocess.run(installDocker, shell=True, check=True)
-        subprocess.run(curlComposeConfig, shell=True, check=True)
         print(f'Successfully installed docker')
     except subprocess.CalledProcessError as e:
         print(f'Error installing packages: {e}')
