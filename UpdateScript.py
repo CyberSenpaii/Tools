@@ -13,9 +13,9 @@ def install_packages(package_list):
     packages_str = ' '.join(package_list)
 
     # Construct the apt install command
-    updateRepos = f'sudo apt update {packages_str} -y'
+    updateRepos = f'sudo apt update -y'
     command = f'sudo apt install {packages_str} -y'
-    upgradeRepos = f'sudo apt upgrade {packages_str} -y'
+    upgradeRepos = f'sudo apt upgrade -y'
 
     try:
         # Run the command using subprocess
