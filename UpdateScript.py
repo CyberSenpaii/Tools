@@ -185,7 +185,8 @@ if __name__ == "__main__":
 
     pip3_packages=[
         'pyftpdlib',
-        'uploadserver'
+        'uploadserver',
+        'docker'
     ]
 
     install_pip3_packages(pip3_packages)
