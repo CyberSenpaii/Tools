@@ -111,7 +111,6 @@ if __name__ == "__main__":
         'https://github.com/BC-SECURITY/Empire.git',
         'https://github.com/BC-SECURITY/Starkiller.git',
         'https://github.com/samratashok/nishang.git',
-        'https://github.com/byt3bl33d3r/CrackMapExec.git',
         'https://github.com/The-Viper-One/PsMapExec.git',
         'https://github.com/lgandx/Responder.git',
         'https://github.com/0dayCTF/reverse-shell-generator.git',
