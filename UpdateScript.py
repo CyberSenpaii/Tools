@@ -149,7 +149,8 @@ if __name__ == "__main__":
         'https://github.com/its-a-feature/Mythic.git',
         'https://github.com/hausec/ADAPE-Script.git',
         'https://github.com/mitre/caldera.git',
-        'https://github.com/redcanaryco/invoke-atomicredteam.git'
+        'https://github.com/redcanaryco/invoke-atomicredteam.git',
+        'https://github.com/redcanaryco/chain-reactor.git'
         # Add more repository URLs as needed
     ]
   
@@ -163,7 +164,8 @@ if __name__ == "__main__":
         'https://github.com/NationalSecurityAgency/ghidra.git',
         'https://github.com/giuspen/cherrytree.git',
         'https://github.com/hatnetsec/NetworkMiner.git',
-        'https://github.com/OWASP/CheatSheetSeries.git'
+        'https://github.com/OWASP/CheatSheetSeries.git',
+        'https://github.com/redcanaryco/surveyor.git'
         # Add more repository URLs as needed
     ]
 
