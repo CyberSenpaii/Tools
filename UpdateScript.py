@@ -134,7 +134,6 @@ if __name__ == "__main__":
     ]
   
     blue_urls = [
-        'https://github.com/mandiant/flare-floss.git',
         'https://github.com/rizinorg/cutter.git',
         'https://github.com/sleuthkit/autopsy.git',
         'https://github.com/VirusTotal/yara.git',
