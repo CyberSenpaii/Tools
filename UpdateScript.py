@@ -30,7 +30,7 @@ def install_packages(package_list):
     except subprocess.CalledProcessError as e:
         print(f'Error installing packages: {e}')
 
-def install_configure_docker():
+def install_configure_docker_and_build_tools():
     # Construct the apt install command
     updateSourcesList = "printf '%s\n' 'deb https://download.docker.com/linux/debian bullseye stable' | sudo tee /etc/apt/sources.list.d/docker-ce.list"
     gpgKeyFile = '/etc/apt/trusted.gpg.d/docker-ce-archive-keyring.gpg'
@@ -38,6 +38,7 @@ def install_configure_docker():
     updateRepos = 'sudo apt update'
     installDocker = 'sudo apt install -y docker-ce docker-ce-cli containerd.io'
     setupBloodhound = 'sudo docker compose up -d'
+    setupSliver = 'curl https://sliver.sh/install | sudo bash'
     
     try:
         # Run the command using subprocess
@@ -47,6 +48,7 @@ def install_configure_docker():
         subprocess.run(updateRepos, shell=True, check=True)
         subprocess.run(installDocker, shell=True, check=True)
         subprocess.run(setupBloodhound, shell=True, check=True)
+        subprocess.run(setupSliver, shell=True, check=True)
         print(f'Successfully installed docker')
     except subprocess.CalledProcessError as e:
         print(f'Error installing packages: {e}')
