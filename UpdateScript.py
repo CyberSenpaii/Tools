@@ -39,8 +39,8 @@ def install_configure_docker_and_build_tools():
     installDocker = 'sudo apt install -y docker-ce docker-ce-cli containerd.io'
     setupBloodhound = 'sudo docker compose up -d'
     setupSliver = 'curl https://sliver.sh/install | sudo bash'
-    setupPipx = 'python3 -m pip install --user pipx'
-    pipxAddPath = 'python3 -m pipx ensurepath'
+    setupPipx = 'sudo python3 -m pip install --user pipx'
+    pipxAddPath = 'sudo python3 -m pipx ensurepath'
     installAutoRecon = 'sudo pipx install git+https://github.com/Tib3rius/AutoRecon.git'
     
     try:
@@ -95,7 +95,6 @@ if __name__ == "__main__":
         'https://github.com/BishopFox/sliver.git',
         'https://github.com/fortra/impacket.git',
         'https://github.com/redcanaryco/atomic-red-team.git',
-        'https://github.com/carlospolop/PEASS-ng.git',
         'https://github.com/1N3/Sn1per.git',
         'https://github.com/matthewdunwoody/POSHSPY.git',
         'https://github.com/mschwager/fierce.git',
