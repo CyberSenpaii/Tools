@@ -135,12 +135,7 @@ if __name__ == "__main__":
   
     blue_urls = [
         'https://github.com/rizinorg/cutter.git',
-        'https://github.com/sleuthkit/autopsy.git',
-        'https://github.com/VirusTotal/yara.git',
         'https://github.com/magicsword-io/LOLDrivers.git',
-        'https://github.com/mandiant/capa.git',
-        'https://github.com/NationalSecurityAgency/ghidra.git',
-        'https://github.com/giuspen/cherrytree.git',
         'https://github.com/hatnetsec/NetworkMiner.git',
         'https://github.com/OWASP/CheatSheetSeries.git',
         'https://github.com/redcanaryco/surveyor.git'
@@ -194,7 +189,10 @@ if __name__ == "__main__":
         'set',
         'npm',
         'dirsearch',
-        'odat'
+        'odat',
+        'autopsy',
+        'yara',
+        'ghidra'
     ]
     
     install_packages(apt_packages)
