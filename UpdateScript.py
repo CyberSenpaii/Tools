@@ -41,7 +41,7 @@ def install_configure_docker_and_build_tools():
     setupSliver = 'curl https://sliver.sh/install | sudo bash'
     setupPipx = 'python3 -m pip install --user pipx'
     pipxAddPath = 'python3 -m pipx ensurepath'
-    installAutoRecon = 'pipx install git+https://github.com/Tib3rius/AutoRecon.git'
+    installAutoRecon = 'sudo pipx install git+https://github.com/Tib3rius/AutoRecon.git'
     
     try:
         # Run the command using subprocess
