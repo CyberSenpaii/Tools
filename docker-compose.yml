@@ -57,16 +57,13 @@ services:
   cyberchef:
     image: binlab/cyberchef
     ports:
-      - ${CYBERCHEF_PORT:-8090}:80
-    depends_on:
-      - bloodhound
+      - ${CYBERCHEF_PORT:-8090}:8081
 
-  reverse_shell_generator:
-    image: binlab/reverse_shell_generator
+  revshells:
+    image: revshells
     ports:
-      - ${REVERSE_SHELL_GENERATOR_PORT:-8091}:80
-    depends_on:
-      - bloodhound
+      - ${REVERSE_SHELL_GENERATOR_PORT:-8091}:8082
+
 
 volumes:
   neo4j-data:
