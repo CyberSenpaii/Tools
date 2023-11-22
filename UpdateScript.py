@@ -91,7 +91,6 @@ if __name__ == "__main__":
         'https://github.com/fortra/impacket.git',
         'https://github.com/redcanaryco/atomic-red-team.git',
         'https://github.com/carlospolop/PEASS-ng.git',
-        'https://github.com/DominicBreuker/pspy.git',
         'https://github.com/1N3/Sn1per.git',
         'https://github.com/Tib3rius/AutoRecon.git',
         'https://github.com/danielmiessler/SecLists.git',
