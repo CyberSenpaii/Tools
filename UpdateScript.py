@@ -136,7 +136,6 @@ if __name__ == "__main__":
     blue_urls = [
         'https://github.com/rizinorg/cutter.git',
         'https://github.com/magicsword-io/LOLDrivers.git',
-        'https://github.com/hatnetsec/NetworkMiner.git',
         'https://github.com/OWASP/CheatSheetSeries.git',
         'https://github.com/redcanaryco/surveyor.git'
         # Add more repository URLs as needed
@@ -192,7 +191,8 @@ if __name__ == "__main__":
         'odat',
         'autopsy',
         'yara',
-        'ghidra'
+        'ghidra',
+        'arkime'
     ]
     
     install_packages(apt_packages)
