@@ -148,7 +148,7 @@ if __name__ == "__main__":
     clone_repositories(red_urls, red_folder)
     clone_repositories(blue_urls, blue_folder)
     
-    install_configure_docker()
+    install_configure_docker_and_build_tools()
     
     apt_packages=[
         'onesixtyone',
