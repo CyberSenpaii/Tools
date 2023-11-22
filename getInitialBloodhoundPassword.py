@@ -4,7 +4,7 @@ import os
 import sys
 
 def check_root():
-    if os.getuid() !=0;
+    if os.getuid() !=0:
         print("Please run the script as root (using sudo).")
         sys.exit(1)
 
