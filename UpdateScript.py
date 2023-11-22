@@ -44,7 +44,7 @@ def install_configure_docker_and_build_tools():
     installAutoRecon = 'sudo pipx install git+https://github.com/Tib3rius/AutoRecon.git'
     installFierce = 'sudo pipx install fierce'
     pullCyberChef = 'sudo docker pull mpepping/cyberchef'
-    buildRevShells = 'sudo docker build -t revshells -f Red/reverse-shell-generator/Dockerfile Red/reverse-shell-generator/'
+    buildRevShells = 'sudo docker build -f Red/reverse-shell-generator/Dockerfile -t name:revshells .'
     
     try:
         # Run the command using subprocess
