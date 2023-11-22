@@ -148,7 +148,8 @@ if __name__ == "__main__":
         'https://github.com/SpecterOps/Nemesis.git',
         'https://github.com/its-a-feature/Mythic.git',
         'https://github.com/hausec/ADAPE-Script.git',
-        'https://github.com/mitre/caldera.git'
+        'https://github.com/mitre/caldera.git',
+        'https://github.com/redcanaryco/invoke-atomicredteam.git'
         # Add more repository URLs as needed
     ]
   
