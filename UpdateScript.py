@@ -118,7 +118,6 @@ if __name__ == "__main__":
         'https://github.com/61106960/adPEAS.git',
         'https://github.com/urbanadventurer/username-anarchy.git',
         'https://github.com/AlessandroZ/LaZagne.git',
-        'https://github.com/quentinhardy/odat.git',
         'https://github.com/unode/firefox_decrypt.git',
         'https://github.com/DNSCrypt/dnscrypt-proxy.git',
         'https://github.com/ly4k/Certipy.git',
@@ -197,7 +196,8 @@ if __name__ == "__main__":
         'sqlninja',
         'set',
         'npm',
-        'dirsearch'
+        'dirsearch',
+        'odat'
     ]
     
     install_packages(apt_packages)
