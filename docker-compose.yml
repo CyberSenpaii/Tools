@@ -60,7 +60,7 @@ services:
       - ${CYBERCHEF_PORT:-8000}:8000
 
   revshells:
-    image: revshells
+    image: reverse_shell_generator
     ports:
       - ${REVERSE_SHELL_GENERATOR_PORT:-8001}:8001
 
