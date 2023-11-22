@@ -202,7 +202,8 @@ if __name__ == "__main__":
         'shellter',
         'dnschef',
         'veil',
-        'sqlninja'
+        'sqlninja',
+        'jekyll'
     ]
     
     install_packages(apt_packages)
