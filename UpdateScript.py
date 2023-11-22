@@ -99,7 +99,6 @@ if __name__ == "__main__":
         'https://github.com/redcanaryco/atomic-red-team.git',
         'https://github.com/1N3/Sn1per.git',
         'https://github.com/matthewdunwoody/POSHSPY.git',
-        'https://github.com/mschwager/fierce.git',
         'https://github.com/ParrotSec/shellter.git',
         'https://github.com/iphelix/dnschef.git',
         'https://github.com/Veil-Framework/Veil.git',
