@@ -114,7 +114,6 @@ if __name__ == "__main__":
         'https://github.com/The-Viper-One/PsMapExec.git',
         'https://github.com/0dayCTF/reverse-shell-generator.git',
         'https://github.com/ropnop/kerbrute.git',
-        'https://github.com/ihebski/DefaultCreds-cheat-sheet.git',
         'https://github.com/shelld3v/JSshell.git',
         'https://github.com/61106960/adPEAS.git',
         'https://github.com/urbanadventurer/username-anarchy.git',
@@ -206,7 +205,8 @@ if __name__ == "__main__":
     pip3_packages=[
         'pyftpdlib',
         'uploadserver',
-        'docker'
+        'docker',
+        'defaultcreds-cheat-sheet'
     ]
 
     install_pip3_packages(pip3_packages)
