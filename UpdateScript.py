@@ -35,7 +35,7 @@ def install_configure_docker_and_build_tools():
     updateSourcesList = "printf '%s\n' 'deb https://download.docker.com/linux/debian bullseye stable' | sudo tee /etc/apt/sources.list.d/docker-ce.list"
     gpgKeyFile = '/etc/apt/trusted.gpg.d/docker-ce-archive-keyring.gpg'
     curlGPGKey = 'curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/docker-ce-archive-keyring.gpg'
-    updateRepos = 'sudo apt update'
+    wineInstall = 'dpkg --add-architecture i386 && apt-get update && apt-get install wine32:i386'
     installDocker = 'sudo apt install -y docker-ce docker-ce-cli containerd.io'
     setupBloodhound = 'sudo docker compose up -d'
     setupSliver = 'curl https://sliver.sh/install | sudo bash'
@@ -49,7 +49,7 @@ def install_configure_docker_and_build_tools():
         subprocess.run(updateSourcesList, shell=True, check=True)
         if not os.path.exists(gpgKeyFile):
             subprocess.run(curlGPGKey, shell=True, check=True)
-        subprocess.run(updateRepos, shell=True, check=True)
+        subprocess.run(wineInstall, shell=True, check=True)
         subprocess.run(installDocker, shell=True, check=True)
         subprocess.run(setupBloodhound, shell=True, check=True)
         subprocess.run(setupSliver, shell=True, check=True)
