@@ -184,7 +184,8 @@ if __name__ == "__main__":
         'evolution',
         'leafpad',
         'certipy-ad',
-        'golang'
+        'golang',
+        'peass'
     ]
     
     install_packages(apt_packages)
