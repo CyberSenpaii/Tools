@@ -199,7 +199,8 @@ if __name__ == "__main__":
         'veil',
         'sqlninja',
         'set',
-        'npm'
+        'npm',
+        'dirsearch'
     ]
     
     install_packages(apt_packages)
