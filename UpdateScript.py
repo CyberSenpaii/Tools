@@ -108,7 +108,6 @@ if __name__ == "__main__":
         'https://github.com/DigitalInterruption/cookie-monster.git',
         'https://github.com/t3l3machus/hoaxshell.git',
         'https://github.com/mdsecactivebreach/SharpShooter.git',
-        'https://github.com/sqlmapproject/sqlmap.git',
         'https://github.com/BC-SECURITY/Empire.git',
         'https://github.com/BC-SECURITY/Starkiller.git',
         'https://github.com/itm4n/PrintSpoofer.git',
