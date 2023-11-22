@@ -100,7 +100,6 @@ if __name__ == "__main__":
         'https://github.com/1N3/Sn1per.git',
         'https://github.com/matthewdunwoody/POSHSPY.git',
         'https://github.com/JlSakuya/Linux-Privilege-Escalation-Exploits.git',
-        'https://github.com/BeichenDream/GodPotato.git',
         'https://github.com/ParrotSec/mimikatz.git',
         'https://github.com/itm4n/FullPowers.git',
         'https://github.com/GTFOBins/GTFOBins.github.io.git',
