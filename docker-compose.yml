@@ -55,9 +55,9 @@ services:
         condition: service_healthy
 
   cyberchef:
-    image: binlab/cyberchef
+    image: mpepping/cyberchef
     ports:
-      - ${CYBERCHEF_PORT:-8090}:8081
+      - ${CYBERCHEF_PORT:-8000}:8000
 
   revshells:
     image: revshells
