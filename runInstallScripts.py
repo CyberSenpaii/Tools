@@ -95,7 +95,6 @@ def runInstallFiles():
 	runStarKillerInstall = 'sudo npm --prefix Red/Starkiller install'
 	runCookieMonsterInstall = 'sudo npm --prefix Red/cookie-monster install'
 	compileKerbrute = 'sudo make all --directory Red/kerbrute'
-	#runRevShellDocker = 'sudo docker run -d -p 81:81 reverse_shell_generator'
 	runMythicInstall = 'sudo make --directory Red/Mythic'
 	
 	
@@ -106,8 +105,6 @@ def runInstallFiles():
 		subprocess.run(runStarKillerInstall, shell=True, check=True)
 		subprocess.run(runCookieMonsterInstall, shell=True, check=True)
 		subprocess.run(compileKerbrute, shell=True, check=True)
-		subprocess.run(buildRevShellsDocker, shell=True, check=True)
-		subprocess.run(runRevShellDocker, shell=True, check=True)
 		subprocess.run(runMythicInstall, shell=True, check=True)
 		print(f'Successfully ran install scripts.')
 	except subprocess.CalledProcessError as e:
