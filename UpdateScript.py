@@ -39,6 +39,9 @@ def install_configure_docker_and_build_tools():
     installDocker = 'sudo apt install -y docker-ce docker-ce-cli containerd.io'
     setupBloodhound = 'sudo docker compose up -d'
     setupSliver = 'curl https://sliver.sh/install | sudo bash'
+    setupPipx = 'python3 -m pip install --user pipx'
+    pipxAddPath = 'python3 -m pipx ensurepath'
+    installAutoRecon = 'pipx install git+https://github.com/Tib3rius/AutoRecon.git'
     
     try:
         # Run the command using subprocess
@@ -49,6 +52,8 @@ def install_configure_docker_and_build_tools():
         subprocess.run(installDocker, shell=True, check=True)
         subprocess.run(setupBloodhound, shell=True, check=True)
         subprocess.run(setupSliver, shell=True, check=True)
+        subprocess.run(setupPipx, shell=True, check=True)
+        subprocess.run(pipxAddPath, shell=True, check=True)
         print(f'Successfully installed docker')
     except subprocess.CalledProcessError as e:
         print(f'Error installing packages: {e}')
@@ -92,8 +97,6 @@ if __name__ == "__main__":
         'https://github.com/redcanaryco/atomic-red-team.git',
         'https://github.com/carlospolop/PEASS-ng.git',
         'https://github.com/1N3/Sn1per.git',
-        'https://github.com/Tib3rius/AutoRecon.git',
-        'https://github.com/danielmiessler/SecLists.git',
         'https://github.com/matthewdunwoody/POSHSPY.git',
         'https://github.com/mschwager/fierce.git',
         'https://github.com/ParrotSec/shellter.git',
@@ -203,7 +206,10 @@ if __name__ == "__main__":
         'sipvicious',
         'tnscmd10g',
         'whatweb',
-        'wkhtmltopdf'
+        'wkhtmltopdf',
+        'python3',
+        'python3-pip',
+        'python3-venv'
     ]
     
     install_packages(apt_packages)
