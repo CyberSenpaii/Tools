@@ -123,7 +123,6 @@ if __name__ == "__main__":
         'https://github.com/itm4n/PrintSpoofer.git',
         'https://github.com/maurosoria/dirsearch.git',
         'https://github.com/epi052/feroxbuster.git',
-        'https://github.com/projectdiscovery/nuclei.git',
         'https://github.com/samratashok/nishang.git',
         'https://github.com/byt3bl33d3r/CrackMapExec.git',
         'https://github.com/The-Viper-One/PsMapExec.git',
