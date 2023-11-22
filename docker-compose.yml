@@ -62,7 +62,7 @@ services:
   revshells:
     image: revshells
     ports:
-      - ${REVERSE_SHELL_GENERATOR_PORT:-8091}:8082
+      - ${REVERSE_SHELL_GENERATOR_PORT:-8001}:8001
 
 
 volumes:
