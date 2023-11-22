@@ -35,7 +35,7 @@ def install_configure_docker_and_build_tools():
     updateSourcesList = "printf '%s\n' 'deb https://download.docker.com/linux/debian bullseye stable' | sudo tee /etc/apt/sources.list.d/docker-ce.list"
     gpgKeyFile = '/etc/apt/trusted.gpg.d/docker-ce-archive-keyring.gpg'
     curlGPGKey = 'curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/docker-ce-archive-keyring.gpg'
-    wineInstall = 'sudo dpkg --add-architecture i386 && sudo apt update && sudo apt install wine32:i386'
+    wineInstall = 'sudo dpkg --add-architecture i386 && sudo apt update && sudo apt install wine32:i386 -y'
     installDocker = 'sudo apt install -y docker-ce docker-ce-cli containerd.io'
     setupBloodhound = 'sudo docker compose up -d'
     setupSliver = 'curl https://sliver.sh/install | sudo bash'
