@@ -101,7 +101,6 @@ if __name__ == "__main__":
         'https://github.com/matthewdunwoody/POSHSPY.git',
         'https://github.com/JlSakuya/Linux-Privilege-Escalation-Exploits.git',
         'https://github.com/ParrotSec/mimikatz.git',
-        'https://github.com/itm4n/FullPowers.git',
         'https://github.com/GTFOBins/GTFOBins.github.io.git',
         'https://github.com/LOLBAS-Project/LOLBAS.git',
         'https://github.com/WADComs/WADComs.github.io.git',
