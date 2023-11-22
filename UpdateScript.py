@@ -99,7 +99,6 @@ if __name__ == "__main__":
         'https://github.com/redcanaryco/atomic-red-team.git',
         'https://github.com/1N3/Sn1per.git',
         'https://github.com/matthewdunwoody/POSHSPY.git',
-        'https://github.com/iphelix/dnschef.git',
         'https://github.com/Veil-Framework/Veil.git',
         'https://github.com/xxgrunge/sqlninja.git',
         'https://github.com/jpillora/chisel.git',
@@ -209,7 +208,8 @@ if __name__ == "__main__":
         'python3',
         'python3-pip',
         'python3-venv',
-        'shellter'
+        'shellter',
+        'dnschef'
     ]
     
     install_packages(apt_packages)
