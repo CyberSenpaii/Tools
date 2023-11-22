@@ -105,7 +105,6 @@ if __name__ == "__main__":
         'https://github.com/LOLBAS-Project/LOLBAS.git',
         'https://github.com/WADComs/WADComs.github.io.git',
         'https://github.com/swisskyrepo/PayloadsAllTheThings.git',
-        'https://github.com/trustedsec/social-engineer-toolkit.git',
         'https://github.com/DigitalInterruption/cookie-monster.git',
         'https://github.com/t3l3machus/hoaxshell.git',
         'https://github.com/mdsecactivebreach/SharpShooter.git',
@@ -203,7 +202,8 @@ if __name__ == "__main__":
         'dnschef',
         'veil',
         'sqlninja',
-        'jekyll'
+        'set',
+        'npm'
     ]
     
     install_packages(apt_packages)
