@@ -183,7 +183,27 @@ if __name__ == "__main__":
         'leafpad',
         'certipy-ad',
         'golang',
-        'peass'
+        'peass',
+        'seclists',
+        'curl',
+        'dnsrecon',
+        'enum4linux',
+        'feroxbuster',
+        'gobuster',
+        'impacket-scripts',
+        'nbtscan',
+        'nikto',
+        'nmap',
+        'oscanner',
+        'redis-tools',
+        'smbclient',
+        'smbmap',
+        'snmp',
+        'sslscan',
+        'sipvicious',
+        'tnscmd10g',
+        'whatweb',
+        'wkhtmltopdf'
     ]
     
     install_packages(apt_packages)
