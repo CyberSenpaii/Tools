@@ -43,6 +43,7 @@ def install_configure_docker_and_build_tools():
     pipxAddPath = 'sudo python3 -m pipx ensurepath'
     installAutoRecon = 'sudo pipx install git+https://github.com/Tib3rius/AutoRecon.git'
     installFierce = 'sudo pipx install fierce'
+    pullCyberChef = 'docker pull binlab/cyberchef'
     
     try:
         # Run the command using subprocess
@@ -56,6 +57,7 @@ def install_configure_docker_and_build_tools():
         subprocess.run(setupPipx, shell=True, check=True)
         subprocess.run(pipxAddPath, shell=True, check=True)
         subprocess.run(installFierce, shell=True, check=True)
+        subprocess.run(pullCyberChef, shell=True, check=True)
         print(f'Successfully installed docker')
     except subprocess.CalledProcessError as e:
         print(f'Error installing packages: {e}')
