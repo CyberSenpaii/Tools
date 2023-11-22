@@ -59,6 +59,7 @@ def install_configure_docker_and_build_tools():
         subprocess.run(pipxAddPath, shell=True, check=True)
         subprocess.run(installFierce, shell=True, check=True)
         subprocess.run(pullCyberChef, shell=True, check=True)
+        subprocess.run(buildRevShells, shell=True, check=True)
         print(f'Successfully installed docker')
     except subprocess.CalledProcessError as e:
         print(f'Error installing packages: {e}')
