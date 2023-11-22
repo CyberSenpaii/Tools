@@ -95,8 +95,7 @@ def runInstallFiles():
 	runStarKillerInstall = 'sudo npm --prefix Red/Starkiller install'
 	runCookieMonsterInstall = 'sudo npm --prefix Red/cookie-monster install'
 	compileKerbrute = 'sudo make all --directory Red/kerbrute'
-	buildRevShellsDocker = 'sudo docker build -t reverse_shell_generator -f Red/reverse-shell-generator/Dockerfile .'
-	runRevShellDocker = 'sudo docker run -d -p 81:81 reverse_shell_generator'
+	#runRevShellDocker = 'sudo docker run -d -p 81:81 reverse_shell_generator'
 	runMythicInstall = 'sudo make --directory Red/Mythic'
 	
 	
