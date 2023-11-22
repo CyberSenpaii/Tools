@@ -178,7 +178,8 @@ if __name__ == "__main__":
         'braa',
         'evolution',
         'leafpad',
-        'certipy-ad'
+        'certipy-ad',
+        'golang'
     ]
     
     install_packages(apt_packages)
