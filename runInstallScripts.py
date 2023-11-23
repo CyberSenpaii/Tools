@@ -92,13 +92,15 @@ def updateSudoersFiles():
 def runInstallFiles():
 	runSniperInstall = 'sudo bash Red/Sn1per/install.sh'
 	runCookieMonsterInstall = 'sudo npm --prefix Red/cookie-monster install'
-	compileKerbrute = 'sudo make all --directory Red/kerbrute'
+	compileKerbruteWindows = 'sudo make windows --directory Red/kerbrute'
+	compileKerbruteLinux = 'sudo make linux --directory Red/kerbrute'
 	runMythicInstall = 'sudo make --directory Red/Mythic'
 	
 	# Run the command using subprocess
 	subprocess.run(runSniperInstall, shell=True, check=True)
 	subprocess.run(runCookieMonsterInstall, shell=True, check=True)
-	subprocess.run(compileKerbrute, shell=True, check=True)
+	subprocess.run(compileKerbruteWindows, shell=True, check=True)
+	subprocess.run(compileKerbruteLinux, shell=True, check=True)
 	subprocess.run(runMythicInstall, shell=True, check=True)
 	print(f'Successfully ran install scripts.')
 
