@@ -101,11 +101,11 @@ def runInstallFiles():
 	try:
 		# Run the command using subprocess
 		subprocess.run(runSniperInstall, shell=True, check=True)
-		subprocess.run(runEmpireInstall, shell=True, check=True)
 		subprocess.run(runStarKillerInstall, shell=True, check=True)
 		subprocess.run(runCookieMonsterInstall, shell=True, check=True)
 		subprocess.run(compileKerbrute, shell=True, check=True)
 		subprocess.run(runMythicInstall, shell=True, check=True)
+		subprocess.run(runEmpireInstall, shell=True, check=True)
 		print(f'Successfully ran install scripts.')
 	except subprocess.CalledProcessError as e:
 		print(f'Error running install scripts: {e}')
