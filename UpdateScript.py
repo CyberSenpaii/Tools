@@ -112,8 +112,6 @@ if __name__ == "__main__":
         'https://github.com/DigitalInterruption/cookie-monster.git',
         'https://github.com/t3l3machus/hoaxshell.git',
         'https://github.com/mdsecactivebreach/SharpShooter.git',
-        'https://github.com/BC-SECURITY/Empire.git',
-        'https://github.com/BC-SECURITY/Starkiller.git',
         'https://github.com/samratashok/nishang.git',
         'https://github.com/The-Viper-One/PsMapExec.git',
         'https://github.com/0dayCTF/reverse-shell-generator.git',
@@ -196,7 +194,9 @@ if __name__ == "__main__":
         'autopsy',
         'yara',
         'ghidra',
-        'arkime'
+        'arkime',
+        'empire',
+        'starkiller'
     ]
     
     install_packages(apt_packages)
