@@ -91,7 +91,7 @@ def updateSudoersFiles():
 
 def runInstallFiles():
 	runSniperInstall = 'sudo bash Red/Sn1per/install.sh'
-	runEmpireInstall = 'sudo bash /home/kali/Desktop/Tools/Red/Empire/setup/install.sh'
+	runEmpireInstall = 'sudo bash /home/kali/Desktop/Tools/Red/Empire/setup/install.sh -y'
 	runStarKillerInstall = 'sudo npm --prefix Red/Starkiller install'
 	runCookieMonsterInstall = 'sudo npm --prefix Red/cookie-monster install'
 	compileKerbrute = 'sudo make all --directory Red/kerbrute'
