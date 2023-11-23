@@ -91,19 +91,15 @@ def updateSudoersFiles():
 
 def runInstallFiles():
 	runSniperInstall = 'sudo bash Red/Sn1per/install.sh'
-	runEmpireInstall = 'sudo bash /home/kali/Desktop/Tools/Red/Empire/setup/install.sh -y'
-	runStarKillerInstall = 'sudo npm --prefix Red/Starkiller install'
 	runCookieMonsterInstall = 'sudo npm --prefix Red/cookie-monster install'
 	compileKerbrute = 'sudo make all --directory Red/kerbrute'
 	runMythicInstall = 'sudo make --directory Red/Mythic'
 	
 	# Run the command using subprocess
 	subprocess.run(runSniperInstall, shell=True, check=True)
-	subprocess.run(runStarKillerInstall, shell=True, check=True)
 	subprocess.run(runCookieMonsterInstall, shell=True, check=True)
 	subprocess.run(compileKerbrute, shell=True, check=True)
 	subprocess.run(runMythicInstall, shell=True, check=True)
-	subprocess.run(runEmpireInstall, shell=True, check=True)
 	print(f'Successfully ran install scripts.')
 
 if __name__ == "__main__":
