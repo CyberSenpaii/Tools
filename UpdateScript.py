@@ -44,7 +44,7 @@ def install_configure_docker_and_build_tools():
     installAutoRecon = 'sudo pipx install git+https://github.com/Tib3rius/AutoRecon.git'
     installFierce = 'sudo pipx install fierce'
     pullCyberChef = 'sudo docker pull mpepping/cyberchef'
-    buildRevShells = 'sudo docker build -f Red/reverse-shell-generator/Dockerfile -t revshells .'
+    buildRevShells = 'sudo docker build -t revshells -f Red/reverse-shell-generator/Dockerfile .'
     
     try:
         # Run the command using subprocess
@@ -92,6 +92,7 @@ def clone_repositories(repo_urls, destination_folder='.'):
             print(f"Cloning repository: {repo_url}")
             subprocess.run(['git', 'clone', repo_url, repo_path])
             print(f"Repository '{repo_name}' cloned successfully.\n")
+
 
 if __name__ == "__main__":
     check_root()
