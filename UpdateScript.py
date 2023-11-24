@@ -42,7 +42,6 @@ def install_configure_docker_and_build_tools():
     pipxAddPath = 'sudo python3 -m pipx ensurepath'
     installAutoRecon = 'sudo pipx install git+https://github.com/Tib3rius/AutoRecon.git'
     installFierce = 'sudo pipx install fierce'
-    pullCyberChef = 'sudo docker pull mpepping/cyberchef'
     
     try:
         # Run the command using subprocess
@@ -55,7 +54,6 @@ def install_configure_docker_and_build_tools():
         subprocess.run(setupPipx, shell=True, check=True)
         subprocess.run(pipxAddPath, shell=True, check=True)
         subprocess.run(installFierce, shell=True, check=True)
-        subprocess.run(pullCyberChef, shell=True, check=True)
         print(f'Successfully installed docker')
     except subprocess.CalledProcessError as e:
         print(f'Error installing packages: {e}')
@@ -90,13 +88,67 @@ def clone_repositories(repo_urls, destination_folder='.'):
             print(f"Repository '{repo_name}' cloned successfully.\n")
 
 def build_containers_compose():
+    pullCyberChef = 'sudo docker pull mpepping/cyberchef'
     moveToRevshellsDir = 'cd Red/reverse-shell-generator'
     buildRevShells = 'sudo docker build -t revshells .'
     composeDocker = 'sudo docker compose up -d -f'
 
+    
+
+    subprocess.run(pullCyberChef, shell=True, check=True)
     subprocess.run(moveToRevshellsDir, shell=True, check=True)
     subprocess.run(buildRevShells, shell=True, check=True)
-    subprocess.run(moveBack, shell=True, check=True)
+    subprocess.run(composeDocker, shell=True, check=True)
+
+def get_container_id_by_image(image_name):
+    # Connect to the Docker daemon
+    client = docker.from_env()
+
+    # Get a list of all containers, including stopped ones
+    all_containers = client.containers.list(all=True)
+
+    # Search for the container with the specified image
+    for container in all_containers:
+        if image_name in container.image.tags:
+            return container.id
+
+    return None
+
+def get_container_logs(container_id, search_string, output_file):
+    # Connect to the Docker daemon
+    client = docker.from_env()
+
+    # Get the container object
+    container = client.containers.get(container_id)
+
+    # Print only the 6th column of lines that contain the specified search string
+    print(f"Logs for Container {container.name} ({container.short_id}):")
+    
+    try:
+        # Get the logs for the container
+        logs = container.logs().decode("utf-8")
+        
+        # Use awk to print the 6th column of lines containing the search string and write to a file
+        command = f"echo '{logs}' | awk '/{search_string}/{{print $6}}' > {output_file}"
+        subprocess.run(command, shell=True)
+        
+        print(f"Output written to {output_file}")
+        
+    except docker.errors.APIError as e:
+        print(f"Error retrieving logs for {container.name} ({container.short_id}): {e}")
+
+def getInitialBloodhoundPassword():
+    target_image = "specterops/bloodhound:latest"
+
+    container_id = get_container_id_by_image(target_image)
+   
+    if container_id:
+        # If the container is found, get and print the 6th column of lines with the specified content
+        search_string = "Initial Password Set To:"
+        output_file = "bloodhound-password.txt"
+        get_container_logs(container_id, search_string, output_file)
+    else:
+        print(f"No running container found with the image: {target_image}")
 
 if __name__ == "__main__":
     check_root()
@@ -210,8 +262,9 @@ if __name__ == "__main__":
         'docker',
         'defaultcreds-cheat-sheet'
     ]
-
     install_pip3_packages(pip3_packages)
+    
     install_configure_docker_and_build_tools()
     build_containers_compose()
+    getInitialBloodhoundPassword()
     
