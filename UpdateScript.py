@@ -43,8 +43,6 @@ def install_configure_docker_and_build_tools():
     installAutoRecon = 'sudo pipx install git+https://github.com/Tib3rius/AutoRecon.git'
     installFierce = 'sudo pipx install fierce'
     pullCyberChef = 'sudo docker pull mpepping/cyberchef'
-    buildRevShells = 'sudo docker build -t revshells -f Red/reverse-shell-generator/Dockerfile .'
-    buildBloodHound = 'sudo docker build -t bloodhound -f Red/BloodHound/dockerfiles/bloodhound.Dockerfile .'
     
     try:
         # Run the command using subprocess
@@ -58,7 +56,6 @@ def install_configure_docker_and_build_tools():
         subprocess.run(pipxAddPath, shell=True, check=True)
         subprocess.run(installFierce, shell=True, check=True)
         subprocess.run(pullCyberChef, shell=True, check=True)
-        subprocess.run(buildRevShells, shell=True, check=True)
         print(f'Successfully installed docker')
     except subprocess.CalledProcessError as e:
         print(f'Error installing packages: {e}')
@@ -208,3 +205,7 @@ if __name__ == "__main__":
 
     install_pip3_packages(pip3_packages)
     install_configure_docker_and_build_tools()
+    buildRevShells = 'sudo docker build -t revshells -f Red/reverse-shell-generator/Dockerfile .'
+
+    subprocess.run(buildRevShells, shell=True, check=True)
+    
