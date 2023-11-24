@@ -1,7 +1,6 @@
 import os
 import subprocess
 import sys
-import docker
 
 #If you want to add yourself to the docker group to use docker without sudo, an additional step is needed:
 #sudo usermod -aG docker $USER
