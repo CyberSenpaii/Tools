@@ -89,14 +89,12 @@ def clone_repositories(repo_urls, destination_folder='.'):
 
 def build_containers_compose():
     pullCyberChef = 'sudo docker pull mpepping/cyberchef'
-    moveToRevshellsDir = 'cd Red/reverse-shell-generator'
-    buildRevShells = 'sudo docker build -t revshells .'
+    buildRevShells = 'cd Red/reverse-shell-generator && sudo docker build -t revshells .'
     composeDocker = 'sudo docker compose up -d -f'
 
     
 
     subprocess.run(pullCyberChef, shell=True, check=True)
-    subprocess.run(moveToRevshellsDir, shell=True, check=True)
     subprocess.run(buildRevShells, shell=True, check=True)
     subprocess.run(composeDocker, shell=True, check=True)
 
