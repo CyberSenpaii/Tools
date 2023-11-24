@@ -53,7 +53,6 @@ def install_configure_docker_and_build_tools():
             subprocess.run(curlGPGKey, shell=True, check=True)
         subprocess.run(wineInstall, shell=True, check=True)
         subprocess.run(installDocker, shell=True, check=True)
-        subprocess.run(setupBloodhound, shell=True, check=True)
         subprocess.run(setupSliver, shell=True, check=True)
         subprocess.run(setupPipx, shell=True, check=True)
         subprocess.run(pipxAddPath, shell=True, check=True)
