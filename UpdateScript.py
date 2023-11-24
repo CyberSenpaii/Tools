@@ -89,6 +89,14 @@ def clone_repositories(repo_urls, destination_folder='.'):
             subprocess.run(['git', 'clone', repo_url, repo_path])
             print(f"Repository '{repo_name}' cloned successfully.\n")
 
+def build_containers_compose():
+    moveToRevshellsDir = 'cd Red/reverse-shell-generator'
+    buildRevShells = 'sudo docker build -t revshells .'
+    composeDocker = 'sudo docker compose up -d -f'
+
+    subprocess.run(moveToRevshellsDir, shell=True, check=True)
+    subprocess.run(buildRevShells, shell=True, check=True)
+    subprocess.run(moveBack, shell=True, check=True)
 
 if __name__ == "__main__":
     check_root()
@@ -205,11 +213,5 @@ if __name__ == "__main__":
 
     install_pip3_packages(pip3_packages)
     install_configure_docker_and_build_tools()
-    moveToRevshellsDir = 'cd Red/reverse-shell-generator'
-    buildRevShells = 'sudo docker build -t revshells .'
-    moveBack = 'cd ../..'
-
-    subprocess.run(moveToRevshellsDir, shell=True, check=True)
-    subprocess.run(buildRevShells, shell=True, check=True)
-    subprocess.run(moveBack, shell=True, check=True)
+    build_containers_compose()
     
