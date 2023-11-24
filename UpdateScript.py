@@ -90,7 +90,7 @@ def clone_repositories(repo_urls, destination_folder='.'):
 def build_containers_compose():
     pullCyberChef = 'sudo docker pull mpepping/cyberchef'
     buildRevShells = 'cd Red/reverse-shell-generator && sudo docker build -t revshells .'
-    composeDocker = 'sudo docker compose up -d -f'
+    composeDocker = 'sudo docker compose up -d'
 
     
 
