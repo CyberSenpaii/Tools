@@ -205,7 +205,11 @@ if __name__ == "__main__":
 
     install_pip3_packages(pip3_packages)
     install_configure_docker_and_build_tools()
-    buildRevShells = 'sudo docker build -t revshells -f Red/reverse-shell-generator/Dockerfile .'
+    moveToRevshellsDir = 'cd Red/reverse-shell-generator'
+    buildRevShells = 'sudo docker build -t revshells .'
+    moveBack = 'cd ../..'
 
+    subprocess.run(moveToRevshellsDir, shell=True, check=True)
     subprocess.run(buildRevShells, shell=True, check=True)
+    subprocess.run(moveBack, shell=True, check=True)
     
