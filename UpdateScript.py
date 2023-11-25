@@ -211,7 +211,8 @@ if __name__ == "__main__":
         'imwheel',
         'libreoffice',
         'notepadqq',
-        'enum4linux-ng'
+        'enum4linux-ng',
+        'cifs-utils'
     ]
     
     install_packages(apt_packages)
