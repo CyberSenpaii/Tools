@@ -200,7 +200,9 @@ if __name__ == "__main__":
         'ghidra',
         'arkime',
         'empire',
-        'starkiller'
+        'starkiller',
+        'dbeaver',
+        'dbeaver-dbgsym'
     ]
     
     install_packages(apt_packages)
