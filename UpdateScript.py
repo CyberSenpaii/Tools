@@ -178,6 +178,7 @@ if __name__ == "__main__":
         'smbclient',
         'smbmap',
         'snmp',
+        'snmp-mibs-downloader',
         'sslscan',
         'sipvicious',
         'tnscmd10g',
