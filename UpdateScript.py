@@ -203,7 +203,8 @@ if __name__ == "__main__":
         'starkiller',
         'dbeaver',
         'dbeaver-dbgsym',
-        'docx2txt'
+        'docx2txt',
+        'dislocker'
     ]
     
     install_packages(apt_packages)
