@@ -205,7 +205,8 @@ if __name__ == "__main__":
         'dbeaver-dbgsym',
         'docx2txt',
         'dislocker',
-        'imwheel'
+        'imwheel',
+        'libreoffice'
     ]
     
     install_packages(apt_packages)
