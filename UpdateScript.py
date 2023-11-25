@@ -202,7 +202,8 @@ if __name__ == "__main__":
         'empire',
         'starkiller',
         'dbeaver',
-        'dbeaver-dbgsym'
+        'dbeaver-dbgsym',
+        'docx2txt'
     ]
     
     install_packages(apt_packages)
