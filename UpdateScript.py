@@ -42,6 +42,7 @@ def install_configure_docker_and_build_tools():
     pipxAddPath = 'sudo python3 -m pipx ensurepath'
     installAutoRecon = 'sudo pipx install git+https://github.com/Tib3rius/AutoRecon.git'
     installFierce = 'sudo pipx install fierce'
+    setupLinWinPwn = 'cd Red/linWinPwn && chmod +x linWinPwn.sh && chmod +x install.sh && sudo ./install.sh'
     
     try:
         # Run the command using subprocess
@@ -54,6 +55,7 @@ def install_configure_docker_and_build_tools():
         subprocess.run(setupPipx, shell=True, check=True)
         subprocess.run(pipxAddPath, shell=True, check=True)
         subprocess.run(installFierce, shell=True, check=True)
+        subprocess.run(setupLinWinPwn, shell=True, check=True)
         print(f'Successfully installed docker')
     except subprocess.CalledProcessError as e:
         print(f'Error installing packages: {e}')
@@ -136,7 +138,8 @@ if __name__ == "__main__":
         'https://github.com/hausec/ADAPE-Script.git',
         'https://github.com/mitre/caldera.git',
         'https://github.com/redcanaryco/invoke-atomicredteam.git',
-        'https://github.com/redcanaryco/chain-reactor.git'
+        'https://github.com/redcanaryco/chain-reactor.git',
+        'https://github.com/lefayjey/linWinPwn.git'
         # Add more repository URLs as needed
     ]
   
@@ -206,7 +209,9 @@ if __name__ == "__main__":
         'docx2txt',
         'dislocker',
         'imwheel',
-        'libreoffice'
+        'libreoffice',
+        'notepadqq',
+        'enum4linux-ng'
     ]
     
     install_packages(apt_packages)
