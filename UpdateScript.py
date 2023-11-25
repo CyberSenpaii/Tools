@@ -204,7 +204,8 @@ if __name__ == "__main__":
         'dbeaver',
         'dbeaver-dbgsym',
         'docx2txt',
-        'dislocker'
+        'dislocker',
+        'imwheel'
     ]
     
     install_packages(apt_packages)
