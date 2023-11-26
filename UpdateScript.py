@@ -221,7 +221,9 @@ if __name__ == "__main__":
         'pyftpdlib',
         'uploadserver',
         'docker',
-        'defaultcreds-cheat-sheet'
+        'defaultcreds-cheat-sheet',
+        'wsgidav',
+        'cheroot'
     ]
     install_pip3_packages(pip3_packages)
     
