@@ -139,7 +139,8 @@ if __name__ == "__main__":
         'https://github.com/mitre/caldera.git',
         'https://github.com/redcanaryco/invoke-atomicredteam.git',
         'https://github.com/redcanaryco/chain-reactor.git',
-        'https://github.com/lefayjey/linWinPwn.git'
+        'https://github.com/lefayjey/linWinPwn.git',
+        'https://github.com/NetSPI/PowerHuntShares.git'
         # Add more repository URLs as needed
     ]
   
