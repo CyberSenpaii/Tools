@@ -150,7 +150,9 @@ if __name__ == "__main__":
         'https://github.com/rizinorg/cutter.git',
         'https://github.com/magicsword-io/LOLDrivers.git',
         'https://github.com/OWASP/CheatSheetSeries.git',
-        'https://github.com/redcanaryco/surveyor.git'
+        'https://github.com/redcanaryco/surveyor.git',
+        'https://github.com/Yara-Rules/rules.git',
+        'https://github.com/Neo23x0/signature-base.git'
         # Add more repository URLs as needed
     ]
 
