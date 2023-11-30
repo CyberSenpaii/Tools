@@ -218,7 +218,8 @@ if __name__ == "__main__":
         'notepadqq',
         'enum4linux-ng',
         'cifs-utils',
-        'gobuster'
+        'gobuster',
+        'joomscan'
     ]
     
     install_packages(apt_packages)
