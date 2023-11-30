@@ -217,7 +217,8 @@ if __name__ == "__main__":
         'libreoffice',
         'notepadqq',
         'enum4linux-ng',
-        'cifs-utils'
+        'cifs-utils',
+        'gobuster'
     ]
     
     install_packages(apt_packages)
