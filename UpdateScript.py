@@ -140,7 +140,9 @@ if __name__ == "__main__":
         'https://github.com/redcanaryco/invoke-atomicredteam.git',
         'https://github.com/redcanaryco/chain-reactor.git',
         'https://github.com/lefayjey/linWinPwn.git',
-        'https://github.com/NetSPI/PowerHuntShares.git'
+        'https://github.com/NetSPI/PowerHuntShares.git',
+        'https://github.com/NetSPI/PowerUpSQL.git',
+        'https://github.com/NetSPI/AutoDirbuster.git'
         # Add more repository URLs as needed
     ]
   
@@ -224,7 +226,9 @@ if __name__ == "__main__":
         'docker',
         'defaultcreds-cheat-sheet',
         'wsgidav',
-        'cheroot'
+        'cheroot',
+        'dnspython',
+        'requests'
     ]
     install_pip3_packages(pip3_packages)
     
