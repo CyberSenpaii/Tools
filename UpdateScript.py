@@ -217,7 +217,6 @@ if __name__ == "__main__":
         'imwheel',
         'libreoffice',
         'notepadqq',
-        'enum4linux-ng',
         'cifs-utils',
         'gobuster',
         'joomscan'
