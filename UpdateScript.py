@@ -38,9 +38,7 @@ def install_configure_docker_and_build_tools():
     wineInstall = 'sudo dpkg --add-architecture i386 && sudo apt update && sudo apt install wine32:i386 -y'
     installDocker = 'sudo apt install -y docker-ce docker-ce-cli containerd.io'
     setupSliver = 'curl https://sliver.sh/install | sudo bash'
-    setupPipx = 'sudo apt install python3-venv && python3 -m pip install --user pipx && python3 -m pipx ensurepath --force'
-    installAutoRecon = 'pipx install git+https://github.com/Tib3rius/AutoRecon.git'
-    installFierce = 'sudo pipx install fierce'
+
     setupLinWinPwn = 'cd Red/linWinPwn && chmod +x linWinPwn.sh && chmod +x install.sh && sudo ./install.sh'
     
     try:
@@ -51,8 +49,6 @@ def install_configure_docker_and_build_tools():
         subprocess.run(wineInstall, shell=True, check=True)
         subprocess.run(installDocker, shell=True, check=True)
         subprocess.run(setupSliver, shell=True, check=True)
-        subprocess.run(setupPipx, shell=True, check=True)
-        subprocess.run(installFierce, shell=True, check=True)
         subprocess.run(setupLinWinPwn, shell=True, check=True)
         print(f'Successfully installed docker')
     except subprocess.CalledProcessError as e:
