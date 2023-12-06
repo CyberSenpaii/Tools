@@ -19,6 +19,7 @@ def install_pipx_and_packages():
 	# Run the command using subprocesssubprocess.run(setupLinWinPwn, shell=True, check=True)
 		subprocess.run(setupPipx, shell=True, check=True)
 		subprocess.run(installFierce, shell=True, check=True)
+		subprocess.run(installAutoRecon, shell=True, check=True)
 		print(f'Successfully installed docker')
 	except subprocess.CalledProcessError as e:
         	print(f'Error installing packages: {e}')
