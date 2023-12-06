@@ -213,7 +213,8 @@ if __name__ == "__main__":
         'notepadqq',
         'cifs-utils',
         'gobuster',
-        'joomscan'
+        'joomscan',
+        'python3-venv'
     ]
     
     install_packages(apt_packages)
