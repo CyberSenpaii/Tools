@@ -14,13 +14,15 @@ def install_pipx_and_packages():
 	setupPipx = 'python3 -m pip install --user pipx && python3 -m pipx ensurepath --force'
 	installAutoRecon = 'pipx install git+https://github.com/Tib3rius/AutoRecon.git --force'
 	installFierce = 'pipx install fierce --force'
+	pipxEnsurePath = 'pipx ensurepath'
   
 	try:
 	# Run the command using subprocesssubprocess.run(setupLinWinPwn, shell=True, check=True)
 		subprocess.run(setupPipx, shell=True, check=True)
 		subprocess.run(installFierce, shell=True, check=True)
 		subprocess.run(installAutoRecon, shell=True, check=True)
-		print(f'Successfully installed pipx packages')
+		subprocess.run(pipxEnsurePath, shell=True, check=True)
+		print(f'Successfully installed pipx packages. Please restart your terminal.')
 	except subprocess.CalledProcessError as e:
         	print(f'Error installing packages: {e}')
 
