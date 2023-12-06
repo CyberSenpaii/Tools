@@ -12,7 +12,7 @@ def install_pipx_and_packages():
     # Construct the apt install command
 
 	setupPipx = 'python3 -m pip install --user pipx && python3 -m pipx ensurepath --force'
-	installAutoRecon = 'pipx install git+https://github.com/Tib3rius/AutoRecon.git'
+	installAutoRecon = 'pipx install git+https://github.com/Tib3rius/AutoRecon.git --force'
 	installFierce = 'pipx install fierce --force'
   
 	try:
