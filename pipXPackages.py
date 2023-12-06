@@ -20,7 +20,7 @@ def install_pipx_and_packages():
 		subprocess.run(setupPipx, shell=True, check=True)
 		subprocess.run(installFierce, shell=True, check=True)
 		subprocess.run(installAutoRecon, shell=True, check=True)
-		print(f'Successfully installed docker')
+		print(f'Successfully installed pipx packages')
 	except subprocess.CalledProcessError as e:
         	print(f'Error installing packages: {e}')
 
