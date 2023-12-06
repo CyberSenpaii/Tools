@@ -11,9 +11,9 @@ def check_root():
 def install_pipx_and_packages():
     # Construct the apt install command
 
-	setupPipx = 'sudo apt install python3-venv && python3 -m pip install --user pipx && python3 -m pipx ensurepath --force'
+	setupPipx = 'python3 -m pip install --user pipx && python3 -m pipx ensurepath --force'
 	installAutoRecon = 'pipx install git+https://github.com/Tib3rius/AutoRecon.git'
-	installFierce = 'sudo pipx install fierce'
+	installFierce = 'pipx install fierce --force'
   
 	try:
 	# Run the command using subprocesssubprocess.run(setupLinWinPwn, shell=True, check=True)
