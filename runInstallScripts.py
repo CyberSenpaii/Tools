@@ -21,7 +21,7 @@ def updateSudoersFiles():
 	#
 	Defaults	env_reset
 	Defaults	mail_badpass
-	Defaults	secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/.local/bin"
+	Defaults	secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/.local/bin:/home/kali/.local/bin"
 
 	# This fixes CVE-2005-4890 and possibly breaks some versions of kdesu
 	# (#1011624, https://bugs.kde.org/show_bug.cgi?id=452532)
