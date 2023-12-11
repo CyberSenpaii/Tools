@@ -137,7 +137,8 @@ if __name__ == "__main__":
         'https://github.com/NetSPI/PowerHuntShares.git',
         'https://github.com/NetSPI/PowerUpSQL.git',
         'https://github.com/NetSPI/AutoDirbuster.git',
-        'https://github.com/TheRook/subbrute.git'
+        'https://github.com/TheRook/subbrute.git',
+        'https://github.com/flozz/p0wny-shell.git'
         # Add more repository URLs as needed
     ]
   
