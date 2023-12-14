@@ -95,6 +95,7 @@ def runInstallFiles():
 	compileKerbruteWindows = 'sudo make windows --directory Red/kerbrute'
 	compileKerbruteLinux = 'sudo make linux --directory Red/kerbrute'
 	runMythicInstall = 'sudo make --directory Red/Mythic'
+	buildLigoloNG = 'cd Red/ligolo-ng && $ go build -o agent cmd/agent/main.go && go build -o proxy cmd/proxy/main.go && GOOS=windows go build -o agent.exe cmd/agent/main.go && GOOS=windows go build -o proxy.exe cmd/proxy/main.go'
 	
 	# Run the command using subprocess
 	subprocess.run(runSniperInstall, shell=True, check=True)
@@ -102,6 +103,7 @@ def runInstallFiles():
 	subprocess.run(compileKerbruteWindows, shell=True, check=True)
 	subprocess.run(compileKerbruteLinux, shell=True, check=True)
 	subprocess.run(runMythicInstall, shell=True, check=True)
+	subprocess.run(buildLigoloNG, shell=True, check=True)
 	print(f'Successfully ran install scripts.')
 
 if __name__ == "__main__":
